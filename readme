@@ -1,0 +1,43 @@
+# Explore Canada – Smart Travel Companion
+
+"Explore Canada – Smart Travel Companion" is a **Node.js** web application that allows users to view **real-time weather forecasts** and **road events** in cities across **Canada**. The app uses data from **three public APIs**:
+
+1. **OpenWeatherMap API** for current weather and geocoding.
+2. **Open-Meteo API** for a **7-day weather forecast** (because OpenWeatherMap's 7-day forecast is a paid feature).
+3. **Open511 BC API** for real-time **road events**.
+
+This app is designed to help locals and tourists stay informed about the weather and road conditions in Canadian cities, all in one place.
+
+---
+
+## Features
+
+- **Search for a city**: Users can enter a city name to get weather and road event information.
+- **Weather Info**: Displays the current weather and a **7-day weather forecast**.
+- **Road Events**: Shows real-time **road conditions**, closures, and incidents in cities across **British Columbia**.
+- **Responsive Design**: The website is responsive and works well on both **desktop** and **mobile** devices.
+
+
+<!-- Setting up OpenWeatherMap API -->
+
+To get the API Key for OpenWeatherMap, follow these steps:
+
+Go to OpenWeatherMap.
+
+Sign up for an account if you don’t have one.
+
+After logging in, go to the API keys section in your account settings.
+
+Create a new API key and copy it.
+
+Paste this API key into the .env file in the OPENWEATHERMAP_API_KEY field.
+
+<!-- Why Open-Meteo for 7-Day Forecast? -->
+
+Open-Meteo is used for fetching the 7-day weather forecast because OpenWeatherMap's 7-day forecast feature is paid. Here’s why Open-Meteo is the ideal solution:
+
+OpenWeatherMap provides the current weather data for free, but for the 7-day forecast, they require a paid subscription for API access.
+
+Open-Meteo offers free access to 7-day weather forecasts, making it an excellent choice for the weather forecast feature without incurring additional costs.
+
+We use OpenWeatherMap for the current weather data and geocoding (getting city coordinates) because it’s a reliable, free API. Then, we use Open-Meteo to get the 7-day forecast based on the coordinates returned by OpenWeatherMap.
